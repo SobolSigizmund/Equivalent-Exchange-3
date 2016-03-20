@@ -1,16 +1,14 @@
 package com.pahimar.ee3.proxy;
 
-public interface IProxy
-{
-    public abstract ClientProxy getClientProxy();
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-    public abstract void initRenderingAndTextures();
+public interface IProxy {
 
-    public abstract void registerEventHandlers();
+    void preInit(FMLPreInitializationEvent event);
 
-    public abstract void registerKeybindings();
+    void init(FMLInitializationEvent event);
 
-    public abstract void playSound(String soundName, float xCoord, float yCoord, float zCoord, float volume, float pitch);
-
-    public abstract void spawnParticle(String particleName, double xCoord, double yCoord, double zCoord, double xVelocity, double yVelocity, double zVelocity);
+    void postInit(FMLPostInitializationEvent event);
 }
