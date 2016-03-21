@@ -72,7 +72,7 @@ public class ItemEE extends Item implements IItemVariantHolder<ItemEE> {
         }
         else {
             for (int i = 0; i < VARIANTS.length; i++) {
-                ModelLoader.setCustomModelResourceLocation(this, i, getCustomModelResourceLocation(VARIANTS[i]));
+                ModelLoader.setCustomModelResourceLocation(this, i, new ModelResourceLocation(getRegistryName()));
             }
         }
     }
