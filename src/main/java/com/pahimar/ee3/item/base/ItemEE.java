@@ -1,6 +1,7 @@
 package com.pahimar.ee3.item.base;
 
 import com.pahimar.ee3.creativetab.CreativeTab;
+import com.pahimar.ee3.init.ModItems;
 import com.pahimar.ee3.reference.Reference;
 import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelBakery;
@@ -34,6 +35,8 @@ public class ItemEE extends Item implements IItemVariantHolder<ItemEE> {
         else {
             VARIANTS = variants;
         }
+
+        ModItems.ITEM_VARIANT_HOLDERS.add(this);
     }
 
     @Override
