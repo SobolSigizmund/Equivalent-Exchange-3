@@ -74,8 +74,13 @@ public class ItemEE extends Item implements IItemVariantHolder<ItemEE> {
             }
         }
         else {
-            for (int i = 0; i < VARIANTS.length; i++) {
-                ModelLoader.setCustomModelResourceLocation(this, i, new ModelResourceLocation(getRegistryName()));
+            if (!getHasSubtypes()) {
+                ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName()));
+            }
+            else {
+                for (int i = 0; i < VARIANTS.length; i++) {
+                    ModelLoader.setCustomModelResourceLocation(this, i, getCustomModelResourceLocation(VARIANTS[i]));
+                }
             }
         }
     }
@@ -96,6 +101,6 @@ public class ItemEE extends Item implements IItemVariantHolder<ItemEE> {
     }
 
     protected ModelResourceLocation getCustomModelResourceLocation(String variant) {
-        return new ModelResourceLocation(String.format("%s:item/%s", Reference.LOWERCASE_MOD_ID, BASE_NAME), variant);
+        return new ModelResourceLocation(Reference.MOD_ID + ":" + variant);
     }
 }
