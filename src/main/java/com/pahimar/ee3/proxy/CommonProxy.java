@@ -1,6 +1,7 @@
 package com.pahimar.ee3.proxy;
 
 import com.pahimar.ee3.handler.ConfigurationHandler;
+import com.pahimar.ee3.handler.CraftingHandler;
 import com.pahimar.ee3.init.ModItems;
 import net.minecraftforge.fml.common.event.*;
 
@@ -24,7 +25,7 @@ public abstract class CommonProxy implements IProxy {
 
     @Override
     public void init(FMLInitializationEvent event) {
-
+        CraftingHandler.init();
     }
 
     @Override

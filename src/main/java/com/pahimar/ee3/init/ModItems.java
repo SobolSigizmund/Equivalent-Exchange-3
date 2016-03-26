@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ModItems {
 
-    public static final List<IItemVariantHolder<ItemEE>> ITEM_VARIANT_HOLDERS = new ArrayList<>();
+    public static final List<IItemVariantHolder> ITEM_VARIANT_HOLDERS = new ArrayList<>();
 
     public static final ItemEE alchenomicon = new ItemAlchenomicon();
     public static final ItemEE alchemicalBag = new ItemAlchemicalBag();
