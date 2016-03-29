@@ -28,12 +28,12 @@ public class ItemAlchemicalDust extends ItemEE implements IItemColor {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public int getColorFromItemstack(ItemStack itemStack, int renderPass) {
+    public int getColorFromItemstack(ItemStack itemStack, int tintIndex) {
 
         if (itemStack.getMetadata() < Colors.DUST_COLOURS.length) {
-            return Integer.parseInt(Colors.DUST_COLOURS[itemStack.getMetadata()], 16);
+            return Colors.DUST_COLOURS[itemStack.getMetadata()];
         }
 
-        return Integer.parseInt(Colors.PURE_WHITE, 16);
+        return Colors.PURE_WHITE;
     }
 }

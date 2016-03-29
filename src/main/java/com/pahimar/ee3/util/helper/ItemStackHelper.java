@@ -304,14 +304,7 @@ public class ItemStackHelper {
             return itemStack.getTagCompound().getCompoundTag(Names.NBT.DISPLAY).getInteger(Names.NBT.COLOR);
         }
 
-        return Integer.parseInt(Colors.PURE_WHITE, 16);
-    }
-
-    public static void setColor(ItemStack itemStack, String color) {
-
-        if (ColorHelper.isValidColor(color)) {
-            setColor(itemStack, Integer.parseInt(color, 16));
-        }
+        return Colors.PURE_WHITE;
     }
 
     public static void setColor(ItemStack itemStack, int color) {

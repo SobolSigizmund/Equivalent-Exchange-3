@@ -3,45 +3,22 @@ package com.pahimar.ee3.util.helper;
 import net.minecraft.item.EnumDyeColor;
 
 import java.awt.*;
-import java.util.regex.Pattern;
 
 public class ColorHelper {
 
-    private static final Pattern HEX_COLOR_CODE_PATTERN = Pattern.compile("^([A-Fa-f0-9]{6})$");
-
-    public static final boolean isValidColor(String color) {
-        return HEX_COLOR_CODE_PATTERN.matcher(color).matches();
-    }
-
     public static float[] getRGB(EnumDyeColor dyeColor) {
         return getRGB(dyeColor.getMapColor().colorValue);
-    }
-
-    public static float[] getRGB(String hexCodeColor) {
-        if (isValidColor(hexCodeColor)) {
-            return getRGB(Integer.parseInt(hexCodeColor, 16));
-        }
-
-        return new float[] {1f, 1f, 1f};
     }
 
     public static float[] getRGB(int intColor) {
         return new Color(intColor).getRGBColorComponents(null);
     }
 
-    public static final String blendAsString(int color1, int color2) {
-        return blendAsString(color1, 1, color2, 1);
-    }
-
-    public static final String blendAsString(int color1, int weight1, int color2, int weight2) {
-        return Integer.toHexString(blend(new Color(color1), weight1, new Color(color2), weight2).getRGB());
-    }
-
-    public static final int blendAsInt(int color1, int color2) {
-        return blendAsInt(color1, 1, color2, 1);
+    public static final int blend(int color1, int color2) {
+        return blend(color1, 1, color2, 1);
 
     }
-    public static final int blendAsInt(int color1, int weight1, int color2, int weight2) {
+    public static final int blend(int color1, int weight1, int color2, int weight2) {
         return blend(new Color(color1), weight1, new Color(color2), weight2).getRGB();
     }
 
