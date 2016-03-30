@@ -7,6 +7,6 @@ public class CraftingHandler {
 
     public static void init() {
 
-        CraftingManager.getInstance().getRecipeList().add(new RecipeAlchemicalBagDyes());
+        CraftingManager.getInstance().addRecipe(new RecipeAlchemicalBagDyes());
     }
 }
