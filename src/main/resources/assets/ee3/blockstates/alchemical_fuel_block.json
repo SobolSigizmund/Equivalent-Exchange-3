@@ -1,0 +1,29 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block",
+    "model": "cube_column"
+  },
+  "variants": {
+    "type": {
+      "alchemical_coal": {
+        "textures": {
+          "end": "entics:blocks/alchemical_coal",
+          "side": "entics:blocks/alchemical_coal_side"
+        }
+      },
+      "mobius_fuel": {
+        "textures": {
+          "end": "entics:blocks/mobius_fuel",
+          "side": "entics:blocks/mobius_fuel_side"
+        }
+      },
+      "aeternalis_fuel": {
+        "textures": {
+          "end": "entics:blocks/aeternalis_fuel",
+          "side": "entics:blocks/aeternalis_fuel_side"
+        }
+      }
+    }
+  }
+}

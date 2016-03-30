@@ -1,0 +1,11 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "ee3:calcinator.obj",
+    "x": 90
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}
