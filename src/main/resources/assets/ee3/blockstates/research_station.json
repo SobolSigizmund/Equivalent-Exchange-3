@@ -2,7 +2,7 @@
   "forge_marker": 1,
   "defaults": {
     "custom": { "flip-v": true },
-    "model": "ee3:calcinator.obj"
+    "model": "ee3:research_station.obj"
   },
   "variants": {
     "normal": [{}],
