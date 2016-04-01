@@ -1,5 +1,6 @@
 package com.pahimar.ee3.proxy;
 
+import com.pahimar.ee3.init.ModBlocks;
 import com.pahimar.ee3.init.ModItems;
 import com.pahimar.ee3.reference.Reference;
 import net.minecraftforge.client.model.obj.OBJLoader;
@@ -17,6 +18,7 @@ public class ClientProxy extends CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
         super.preInit(event);
         ModItems.initModelsAndVariants();
+        ModBlocks.initModelsAndVariants();
         OBJLoader.INSTANCE.addDomain(Reference.MOD_ID);
     }
 
