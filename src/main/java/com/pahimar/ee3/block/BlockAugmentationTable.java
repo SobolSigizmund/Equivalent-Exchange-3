@@ -8,11 +8,11 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockCalcinator extends BlockEE {
+public class BlockAugmentationTable extends BlockEE {
 
-    private static final String NAME = "calcinator";
+    private static final String NAME = "augmentation_table";
 
-    public BlockCalcinator() {
+    public BlockAugmentationTable() {
         super(NAME);
     }
 

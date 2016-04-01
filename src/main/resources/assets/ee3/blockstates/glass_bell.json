@@ -1,0 +1,11 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "custom": { "flip-v": true },
+    "model": "ee3:glass_bell.obj"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

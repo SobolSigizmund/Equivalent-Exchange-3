@@ -2,17 +2,18 @@ package com.pahimar.ee3.block;
 
 import com.pahimar.ee3.block.base.BlockEE;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockCalcinator extends BlockEE {
+public class BlockGlassBell extends BlockEE {
 
-    private static final String NAME = "calcinator";
+    private static final String NAME = "glass_bell";
 
-    public BlockCalcinator() {
+    public BlockGlassBell() {
         super(NAME);
     }
 
@@ -35,5 +36,12 @@ public class BlockCalcinator extends BlockEE {
     @Override
     public boolean isFullCube(IBlockState state) {
         return false;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public BlockRenderLayer getBlockLayer()
+    {
+        return BlockRenderLayer.CUTOUT;
     }
 }
