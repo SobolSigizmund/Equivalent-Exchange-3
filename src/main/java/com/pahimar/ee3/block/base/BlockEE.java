@@ -27,6 +27,6 @@ public abstract class BlockEE extends Block {
 
     @SideOnly(Side.CLIENT)
     public void initModelsAndVariants() {
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName()));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName().toString()));
     }
 }

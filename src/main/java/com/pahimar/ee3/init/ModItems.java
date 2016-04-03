@@ -30,17 +30,17 @@ public class ModItems {
     public static final ItemEE philosophersStone = new ItemPhilosophersStone();
 
     public static void register() {
-        GameRegistry.registerItem(alchenomicon);
-        GameRegistry.registerItem(alchemicalBag);
-        GameRegistry.registerItem(alchemicalDust);
-        GameRegistry.registerItem(alchemicalFuel);
-        GameRegistry.registerItem(chalk);
-        GameRegistry.registerItem(knowledgeScroll);
-        GameRegistry.registerItem(lootBall);
-        GameRegistry.registerItem(miniumShard);
-        GameRegistry.registerItem(inertStone);
-        GameRegistry.registerItem(miniumStone);
-        GameRegistry.registerItem(philosophersStone);
+        GameRegistry.register(alchenomicon);
+        GameRegistry.register(alchemicalBag);
+        GameRegistry.register(alchemicalDust);
+        GameRegistry.register(alchemicalFuel);
+        GameRegistry.register(chalk);
+        GameRegistry.register(knowledgeScroll);
+        GameRegistry.register(lootBall);
+        GameRegistry.register(miniumShard);
+        GameRegistry.register(inertStone);
+        GameRegistry.register(miniumStone);
+        GameRegistry.register(philosophersStone);
     }
 
     @SideOnly(Side.CLIENT)

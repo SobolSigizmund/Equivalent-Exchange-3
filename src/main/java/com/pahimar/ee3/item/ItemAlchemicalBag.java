@@ -61,7 +61,7 @@ public class ItemAlchemicalBag extends ItemEE implements IOwnable, IItemColor {
 //            entityPlayer.openGui(EquivalentExchange3.instance, GUIs.ALCHEMICAL_BAG.ordinal(), entityPlayer.worldObj, (int) entityPlayer.posX, (int) entityPlayer.posY, (int) entityPlayer.posZ);
         }
 
-        return new ActionResult(EnumActionResult.PASS, itemStack);
+        return new ActionResult<>(EnumActionResult.PASS, itemStack);
     }
 
     @Override

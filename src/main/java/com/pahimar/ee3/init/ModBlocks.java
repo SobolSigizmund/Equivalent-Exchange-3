@@ -22,6 +22,7 @@ public class ModBlocks {
     public static final BlockEE researchStation = new BlockResearchStation();
 
     public static void register() {
+        // We should be using GameRegistry#register here, but problems exist with this right now (Forge 1826)
         GameRegistry.registerBlock(calcinator);
         GameRegistry.registerBlock(glassBell);
         GameRegistry.registerBlock(aludelBase);
@@ -31,7 +32,6 @@ public class ModBlocks {
 
     @SideOnly(Side.CLIENT)
     public static void initModelsAndVariants() {
-
         BLOCKS.forEach(BlockEE::initModelsAndVariants);
     }
 }
