@@ -1,7 +1,6 @@
 package com.pahimar.ee3.init;
 
 import com.pahimar.ee3.item.*;
-import com.pahimar.ee3.item.base.IItemVariantHolder;
 import com.pahimar.ee3.item.base.ItemEE;
 import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.item.ItemStack;
@@ -15,7 +14,7 @@ import java.util.List;
 
 public class ModItems {
 
-    public static final List<IItemVariantHolder> ITEM_VARIANT_HOLDERS = new ArrayList<>();
+    public static final List<ItemEE> ITEMS = new ArrayList<>();
 
     public static final ItemEE alchenomicon = new ItemAlchenomicon();
     public static final ItemEE alchemicalBag = new ItemAlchemicalBag();
@@ -45,24 +44,20 @@ public class ModItems {
 
     @SideOnly(Side.CLIENT)
     public static void initModelsAndVariants() {
-
-        for (IItemVariantHolder itemVariantHolder : ITEM_VARIANT_HOLDERS) {
-            itemVariantHolder.getItem().initModelsAndVariants();
-        }
+        ITEMS.forEach(ItemEE::initModelsAndVariants);
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerItemColors() {
 
-        // TODO Could possibly improve this with streams and lambdas, if we are smart
-        for (IItemVariantHolder itemVariantHolder : ITEM_VARIANT_HOLDERS) {
-            if (itemVariantHolder.getItem() instanceof IItemColor) {
+        for (ItemEE itemEE : ITEMS) {
+            if (itemEE instanceof IItemColor) {
                 FMLClientHandler.instance().getClient().getItemColors().registerItemColorHandler(new IItemColor() {
                     @Override
                     public int getColorFromItemstack(ItemStack itemStack, int tintIndex) {
-                        return ((IItemColor) itemVariantHolder.getItem()).getColorFromItemstack(itemStack, tintIndex);
+                        return ((IItemColor) itemEE).getColorFromItemstack(itemStack, tintIndex);
                     }
-                }, itemVariantHolder.getItem());
+                }, itemEE);
             }
         }
     }

@@ -36,7 +36,7 @@ public class ItemEE extends Item implements IItemVariantHolder<ItemEE> {
             VARIANTS = variants;
         }
 
-        ModItems.ITEM_VARIANT_HOLDERS.add(this);
+        ModItems.ITEMS.add(this);
     }
 
     @Override
