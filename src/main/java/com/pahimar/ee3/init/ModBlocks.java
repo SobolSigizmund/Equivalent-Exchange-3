@@ -2,6 +2,7 @@ package com.pahimar.ee3.init;
 
 import com.pahimar.ee3.block.*;
 import com.pahimar.ee3.block.base.BlockEE;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -22,12 +23,11 @@ public class ModBlocks {
     public static final BlockEE researchStation = new BlockResearchStation();
 
     public static void register() {
-        // We should be using GameRegistry#register here, but problems exist with this right now (Forge 1826)
-        GameRegistry.registerBlock(calcinator);
-        GameRegistry.registerBlock(glassBell);
-        GameRegistry.registerBlock(aludelBase);
-        GameRegistry.registerBlock(augmentationTable);
-        GameRegistry.registerBlock(researchStation);
+
+        for (BlockEE blockEE : BLOCKS) {
+            GameRegistry.register(blockEE);
+            GameRegistry.register(new ItemBlock(blockEE).setRegistryName(blockEE.getRegistryName()));
+        }
     }
 
     @SideOnly(Side.CLIENT)
