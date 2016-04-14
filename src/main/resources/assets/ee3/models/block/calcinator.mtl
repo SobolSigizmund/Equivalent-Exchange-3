@@ -1,8 +1,0 @@
-# Blender MTL File: 'calcinator.blend'
-# Material Count: 2
-
-newmtl Calcinator
-map_Kd ee3:blocks/calcinator
-
-newmtl Calcinator_NONE
-map_Kd  ee3:blocks/calcinator

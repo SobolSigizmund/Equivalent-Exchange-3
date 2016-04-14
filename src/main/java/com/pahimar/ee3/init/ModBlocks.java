@@ -16,7 +16,7 @@ public class ModBlocks {
 
     // FIXME I'm broke as F
 //    public static final BlockEE alchemicalFuel = new BlockAlchemicalFuel();
-    public static final BlockEE calcinator = new BlockCalcinator();
+    public static final BlockEE calciner = new BlockCalciner();
     public static final BlockEE glassBell = new BlockGlassBell();
     public static final BlockEE aludelBase = new BlockAludelBase();
     public static final BlockEE augmentationTable = new BlockAugmentationTable();
