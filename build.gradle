@@ -52,7 +52,7 @@ minecraft {
     version = minecraft_version + "-" + forge_version
     runDir = "run"
 
-//    useDepAts = true // Required for JEI
+    useDepAts = true // Required for JEI
 
     // Set mod version in code prior to compilation
     replaceIn "reference/Reference.java"
@@ -67,10 +67,10 @@ minecraft {
     mappings = mcp_mappings_version
 }
 
-// dependencies {
-//    deobfCompile "mezz.jei:jei_${minecraft_version}:${dep_jei_version}"
-//    deobfCompile "mcp.mobius.waila:Waila:${dep_waila_version}"
-// }
+dependencies {
+    deobfCompile "mezz.jei:jei_${minecraft_version}:${dep_jei_version}"
+    deobfCompile "mcp.mobius.waila:Waila:${dep_waila_version}"
+}
 
 processResources
         {

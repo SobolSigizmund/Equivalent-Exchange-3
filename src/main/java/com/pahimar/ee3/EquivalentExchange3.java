@@ -35,17 +35,17 @@ public class EquivalentExchange3 {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        proxy.preInit(event);
+        proxy.onPreInit(event);
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        proxy.init(event);
+        proxy.onInit(event);
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-        proxy.postInit(event);
+        proxy.onPostInit(event);
     }
 
     @EventHandler

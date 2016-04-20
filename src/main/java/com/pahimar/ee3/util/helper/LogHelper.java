@@ -7,22 +7,22 @@ import org.apache.logging.log4j.message.Message;
 public class LogHelper {
 
     public static final Marker MOD_MARKER = MarkerManager.getMarker(Reference.MOD_ID);
-    private static Logger logger = LogManager.getLogger(Reference.MOD_ID);
+    private static final Logger LOGGER = LogManager.getLogger(Reference.MOD_ID);
 
     public static void log(Level level, Marker marker, Message message) {
-        logger.log(level, marker, message);
+        LOGGER.log(level, marker, message);
     }
 
     public static void log(Level level, Marker marker, Object object) {
-        logger.log(level, marker, object);
+        LOGGER.log(level, marker, object);
     }
 
     public static void log(Level level, Marker marker, String message) {
-        logger.log(level, marker, message);
+        LOGGER.log(level, marker, message);
     }
 
     public static void log(Level level, Marker marker, String format, Object... params) {
-        logger.log(level, marker, format, params);
+        LOGGER.log(level, marker, format, params);
     }
 
     public static void log(Level level, Message message) {

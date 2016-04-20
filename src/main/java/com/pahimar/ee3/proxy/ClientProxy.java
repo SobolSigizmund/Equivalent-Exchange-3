@@ -15,16 +15,16 @@ public class ClientProxy extends CommonProxy {
     }
 
     @Override
-    public void preInit(FMLPreInitializationEvent event) {
-        super.preInit(event);
+    public void onPreInit(FMLPreInitializationEvent event) {
+        super.onPreInit(event);
         ModItems.initModelsAndVariants();
         ModBlocks.initModelsAndVariants();
         OBJLoader.INSTANCE.addDomain(Reference.MOD_ID);
     }
 
     @Override
-    public void init(FMLInitializationEvent event) {
-        super.init(event);
+    public void onInit(FMLInitializationEvent event) {
+        super.onInit(event);
         ModItems.registerItemColors();
     }
 }
